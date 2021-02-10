@@ -1,1 +1,1 @@
-.columns__wrapper{display:flex;margin-top:80px}.columns__wrapper .column__container{overflow:hidden;width:50%;padding:10px}@media (max-width: 1200px){.columns__wrapper{display:block}.columns__wrapper .column__container{width:100%}}
+.columns__wrapper{display:flex;margin-top:80px}.columns__wrapper .column__container{overflow:hidden;width:50%;padding:10px}@media (max-width: 1200px){.columns__wrapper{display:block}.columns__wrapper .column__container{width:100%}}@media (max-width: 480px){.columns__wrapper{margin-top:100px}}
