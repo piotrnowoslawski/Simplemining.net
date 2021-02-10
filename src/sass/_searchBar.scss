@@ -13,7 +13,6 @@
       border-right: none;
       border-radius: 3px 0 0 3px;
       padding: 5px;
-      margin-right: 5px;
       &::placeholder {
         color: $color-blue;
       }
@@ -33,6 +32,17 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: 30px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar__container {
+    width: 100%;
+    padding: 0 20px;
+
+    .search-bar__form {
+      min-width: calc(100% - 40px);
     }
   }
 }

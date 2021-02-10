@@ -9,8 +9,16 @@
   height: 60px;
   background: $color-white;
   transition: 0.3s;
+  border-bottom: 5px solid $color-blue;
 }
 
 .navigation__scroll {
   transform: translateY(-100%);
+}
+
+@media (max-width: 480px) {
+  .navigation {
+    display: block;
+    height: 120px;
+  }
 }

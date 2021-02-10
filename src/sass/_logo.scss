@@ -9,5 +9,17 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50px;
+    transition: 0.3s;
+
+    &:hover {
+      filter: brightness(0%);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .logo__container {
+    height: 50%;
+    margin: 0 15px 5px 15px;
   }
 }

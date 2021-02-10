@@ -9,6 +9,7 @@
   height: 60px;
   background: white;
   transition: 0.3s;
+  border-bottom: 5px solid #116ac2;
 }
 
 .navigation__scroll {
@@ -73,6 +74,7 @@
 
 .columns__wrapper {
   display: flex;
+  margin-top: 60px;
 }
 
 .columns__wrapper .column__container {

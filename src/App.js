@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getFaq } from "data/fetch/faq.fetch";
 import { NavBar, Logo, SearchBar, Wrapper, Status, Column } from "components";
@@ -19,24 +20,26 @@ function App() {
   console.log(faqQuestions);
 
   return (
-    <div className="App">
-      <NavBar>
-        <Logo />
-        <SearchBar />
-      </NavBar>
-      {pending ? (
-        <Status message={"Data loading ..."} />
-      ) : (
-        <Wrapper>
-          {faqGroups && (
-            <Column groups={faqGroups.left} questions={faqQuestions} />
-          )}
-          {faqGroups && (
-            <Column groups={faqGroups.right} questions={faqQuestions} />
-          )}
-        </Wrapper>
-      )}
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar>
+          <Logo />
+          <SearchBar />
+        </NavBar>
+        {pending ? (
+          <Status message={"Data loading ..."} />
+        ) : (
+          <Wrapper>
+            {faqGroups && (
+              <Column groups={faqGroups.left} questions={faqQuestions} />
+            )}
+            {faqGroups && (
+              <Column groups={faqGroups.right} questions={faqQuestions} />
+            )}
+          </Wrapper>
+        )}
+      </div>
+    </Router>
   );
 }
 
