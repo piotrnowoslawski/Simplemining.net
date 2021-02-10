@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getFaq } from "data/fetch/faq.fetch";
+import { SearchBar } from "components";
 import { getFilteredFaq } from "data/selectors/getFilteredFaq";
 
 function App() {
@@ -15,10 +16,13 @@ function App() {
     dispatch(getFaq());
   }, []);
 
-  console.log(faqGroups);
   console.log(faqQuestions);
 
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <SearchBar />
+    </div>
+  );
 }
 
 export default App;
