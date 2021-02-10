@@ -1,22 +1,18 @@
-import {
-  GroupHeader,
-  GroupItemsList,
-  GroupItemTitle,
-  GroupItemContent,
-} from "components";
+import { GroupHeader, GroupItemsList, GroupItem, Status } from "components";
 
 const Group = ({ item, groupQuestions }) => {
   return (
-    <div>
+    <div className="group__container">
       <GroupHeader title={item.name} />
-      <GroupItemsList>
-        {groupQuestions.map(({ id, title, content }) => (
-          <li key={id}>
-            <GroupItemTitle title={title} />
-            <GroupItemContent content={content} />
-          </li>
-        ))}
-      </GroupItemsList>
+      {groupQuestions.length > 0 ? (
+        <GroupItemsList>
+          {groupQuestions.map((item) => (
+            <GroupItem key={item.id} item={item} />
+          ))}
+        </GroupItemsList>
+      ) : (
+        <Status message={"No information in this category"} />
+      )}
     </div>
   );
 };

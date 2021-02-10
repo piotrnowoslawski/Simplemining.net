@@ -7,6 +7,7 @@ export { default as Column } from "./Column";
 export { default as Group } from "./Group";
 export { default as GroupHeader } from "./GroupHeader";
 export { default as GroupItemsList } from "./GroupItemsList";
+export { default as GroupItem } from "./GroupItem";
 export { default as GroupItemContent } from "./GroupItemContent";
 export { default as GroupItemTitle } from "./GroupItemTitle";
 export { default as ImgElement } from "./ImgElement";

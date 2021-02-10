@@ -1,0 +1,39 @@
+.group__container {
+  .group__header {
+    background: $color-blue;
+    border-radius: 3px;
+    color: $color-white;
+    padding: 10px 15px;
+    margin: 20px 0;
+  }
+
+  .group__title {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: 1px solid $color-black;
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-black;
+      color: $color-white;
+    }
+  }
+
+  .group__content-wrapper {
+    height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    border: 1px solid $color-black;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+    transition: 0.3s;
+  }
+
+  .group__content-wrapper-active {
+    padding: 15px 15px;
+    height: auto;
+  }
+}

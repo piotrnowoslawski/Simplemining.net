@@ -1,5 +1,9 @@
-const GroupItemTitle = ({ title }) => {
-  return <h3>{title}</h3>;
+const GroupItemTitle = ({ title, handleClick }) => {
+  return (
+    <h3 className="group__title" onClick={handleClick}>
+      {title}
+    </h3>
+  );
 };
 
 export default GroupItemTitle;

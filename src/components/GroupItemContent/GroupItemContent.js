@@ -1,4 +1,4 @@
-const GroupItemContent = ({ content }) => {
+const GroupItemContent = ({ content, isOpen }) => {
   const createMarkup = () => {
     return { __html: content };
   };
@@ -7,7 +7,15 @@ const GroupItemContent = ({ content }) => {
     return <div dangerouslySetInnerHTML={createMarkup()} />;
   };
 
-  return <>{setContent()}</>;
+  return (
+    <div
+      className={`group__content-wrapper ${
+        isOpen && "group__content-wrapper-active"
+      }`}
+    >
+      {setContent()}
+    </div>
+  );
 };
 
 export default GroupItemContent;

@@ -2,6 +2,18 @@
   display: flex;
   height: 35px;
 
+  &:hover {
+    .search-bar__form {
+      .search-bar__input {
+        border-color: $color-blue;
+      }
+    }
+
+    .search-bar__img-wrapper {
+      border-color: $color-blue;
+    }
+  }
+
   .search-bar__form {
     min-width: 300px;
     max-width: 300px;
@@ -13,6 +25,7 @@
       border-right: none;
       border-radius: 3px 0 0 3px;
       padding: 5px;
+      transition: 0.3s;
       &::placeholder {
         color: $color-blue;
       }
@@ -31,7 +44,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 30px;
+      width: 28px;
     }
   }
 }

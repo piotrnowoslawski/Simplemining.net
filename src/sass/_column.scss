@@ -3,7 +3,18 @@
   margin-top: 80px;
 
   .column__container {
+    overflow: hidden;
     width: 50%;
     padding: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .columns__wrapper {
+    display: block;
+
+    .column__container {
+      width: 100%;
+    }
   }
 }
