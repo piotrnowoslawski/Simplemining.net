@@ -1,1 +1,12 @@
 export { default as SearchBar } from "./SearchBar";
+export { default as NavBar } from "./NavBar";
+export { default as Logo } from "./Logo";
+export { default as Wrapper } from "./Wrapper";
+export { default as Status } from "./Status";
+export { default as Column } from "./Column";
+export { default as Group } from "./Group";
+export { default as GroupHeader } from "./GroupHeader";
+export { default as GroupItemsList } from "./GroupItemsList";
+export { default as GroupItemContent } from "./GroupItemContent";
+export { default as GroupItemTitle } from "./GroupItemTitle";
+export { default as ImgElement } from "./ImgElement";

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getFaq } from "data/fetch/faq.fetch";
-import { SearchBar } from "components";
+import { NavBar, Logo, SearchBar, Wrapper, Status, Column } from "components";
 import { getFilteredFaq } from "data/selectors/getFilteredFaq";
 
 function App() {
@@ -20,7 +20,22 @@ function App() {
 
   return (
     <div className="App">
-      <SearchBar />
+      <NavBar>
+        <Logo />
+        <SearchBar />
+      </NavBar>
+      {pending ? (
+        <Status message={"Data loading ..."} />
+      ) : (
+        <Wrapper>
+          {faqGroups && (
+            <Column groups={faqGroups.left} questions={faqQuestions} />
+          )}
+          {faqGroups && (
+            <Column groups={faqGroups.right} questions={faqQuestions} />
+          )}
+        </Wrapper>
+      )}
     </div>
   );
 }

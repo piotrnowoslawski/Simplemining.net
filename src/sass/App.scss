@@ -1,0 +1,19 @@
+@import "variables";
+@import "navigation";
+@import "logo";
+@import "searchBar";
+@import "column";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100%;
+  padding: 15px;
+}

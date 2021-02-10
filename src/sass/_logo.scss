@@ -1,0 +1,13 @@
+.logo__container {
+  position: relative;
+  width: 60px;
+  height: 100%;
+  margin: 0 20px;
+  .logo__img {
+    position: absolute;
+    top: calc(50% + 2px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+  }
+}
