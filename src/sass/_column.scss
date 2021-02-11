@@ -1,10 +1,11 @@
 .columns__wrapper {
   display: flex;
   margin-top: 80px;
+  justify-content: space-around;
 
   .column__container {
     overflow: hidden;
-    width: 50%;
+    width: 45%;
     padding: 10px;
   }
 }
@@ -21,6 +22,13 @@
 
 @media (max-width: 480px) {
   .columns__wrapper {
-    margin-top: 100px;
+    .column__container {
+      &:first-of-type {
+        margin-top: 120px;
+      }
+      &:nth-of-type(2) {
+        margin-top: -20px;
+      }
+    }
   }
 }

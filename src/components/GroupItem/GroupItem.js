@@ -20,9 +20,7 @@ const GroupItem = ({ item }) => {
     if (window.location.hash === `#question-${item.id}`) {
       setOpen(true);
       scrollTo();
-    } else {
-      setOpen(false);
-    }
+    } else setOpen(false);
   }, [window.location.hash]);
 
   useEffect(() => {
@@ -30,9 +28,7 @@ const GroupItem = ({ item }) => {
       if (window.location.hash === `#question-${item.id}`) {
         setOpen(true);
         scrollTo();
-      } else {
-        setOpen(false);
-      }
+      } else setOpen(false);
     });
   });
 

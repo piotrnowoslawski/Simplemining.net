@@ -6,10 +6,10 @@ const NavBar = (props) => {
 
   const handleScroll = () => {
     const offset = window.pageYOffset;
-    if (offset > position + 100) {
+    if (offset > position + 150) {
       setPosition(offset);
       setVisible(false);
-      setTimeout(() => setVisible(true), 300);
+      setTimeout(() => setVisible(true), 1000);
     }
   };
 
