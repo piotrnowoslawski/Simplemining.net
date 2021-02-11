@@ -1,0 +1,1 @@
+.logo__container{position:relative;width:60px;height:100%;margin:0 20px}.logo__container .logo__img{position:absolute;top:calc(50% + 2px);left:50%;transform:translate(-50%, -50%);width:50px}@media (max-width: 480px){.logo__container{height:50%;margin:0 15px 5px 15px}}
