@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { GroupItemTitle, GroupItemContent } from "components";
 
 const GroupItem = ({ item }) => {
@@ -6,18 +7,29 @@ const GroupItem = ({ item }) => {
   const handleClick = () => setOpen(!isOpen);
 
   useEffect(() => {
-    window.addEventListener("load", (e) => {
-      if (
-        window.location.hash.replace("#/", "") ===
-        encodeURIComponent(item.title)
-      )
-        setOpen(true);
+    window.location.hash === `#question-${item.id}`
+      ? setOpen(true)
+      : setOpen(false);
+  }, [window.location.hash]);
+
+  useEffect(() => {
+    window.addEventListener("hashchange", (e) => {
+      window.location.hash === `#question-${item.id}`
+        ? setOpen(true)
+        : setOpen(false);
     });
   });
 
   return (
     <li id={decodeURIComponent(item.title)}>
-      <GroupItemTitle title={item.title} handleClick={handleClick} />
+      <NavLink
+        to={{
+          pathname: "/",
+          hash: `#question-${item.id}`,
+        }}
+      >
+        <GroupItemTitle title={item.title} handleClick={handleClick} />
+      </NavLink>
       <GroupItemContent content={item.content} isOpen={isOpen} />
     </li>
   );

@@ -1,10 +1,5 @@
 import { useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  HashRouter,
-  Switch,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getFaq } from "data/fetch/faq.fetch";
 import { NavBar, Logo, SearchBar, Wrapper, Status, Column } from "components";
@@ -23,7 +18,9 @@ function App() {
   }, []);
 
   return (
-    <HashRouter>
+    <Router
+      basename={process.env.NODE_ENV === "development" ? "/" : "/simplemining"}
+    >
       <div className="App">
         <NavBar>
           <Logo />
@@ -42,7 +39,7 @@ function App() {
           </Wrapper>
         )}
       </div>
-    </HashRouter>
+    </Router>
   );
 }
 
