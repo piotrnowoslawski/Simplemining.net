@@ -40,6 +40,10 @@
     padding: 0 15px;
     border-bottom: 1px solid $color-black;
     transition: 0.3s linear;
+
+    div {
+      overflow-x: scroll;
+    }
   }
 
   .group__content-wrapper-active {

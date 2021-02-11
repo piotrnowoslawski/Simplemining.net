@@ -18,4 +18,31 @@
 body {
   max-width: 100%;
   padding: 0 15px 50px 15px;
+  line-height: 140%;
+}
+
+a:link {
+  color: $color-blue;
+}
+
+p {
+  padding: 10px 0;
+}
+
+table {
+  border-collapse: collapse;
+  min-width: 750px;
+  tbody {
+    tr {
+      display: flex;
+      th,
+      td {
+        min-width: calc(100% / 8);
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid $color-black;
+        font-weight: 400;
+      }
+    }
+  }
 }
