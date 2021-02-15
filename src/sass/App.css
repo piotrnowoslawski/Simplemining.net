@@ -1,0 +1,253 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 60px;
+  background: white;
+  transition: 0.3s;
+  border-bottom: 5px solid #116ac2;
+}
+
+.navigation__scroll {
+  transform: translateY(-100%);
+}
+
+@media (max-width: 480px) {
+  .navigation {
+    display: block;
+    height: 120px;
+  }
+}
+
+.logo__container {
+  position: relative;
+  width: 60px;
+  height: 100%;
+  margin: 0 20px;
+}
+
+.logo__container .logo__img {
+  position: absolute;
+  top: calc(50% + 2px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+}
+
+@media (max-width: 480px) {
+  .logo__container {
+    height: 50%;
+    margin: 0 15px 5px 15px;
+  }
+}
+
+.search-bar__container {
+  display: flex;
+  height: 35px;
+}
+
+.search-bar__container:hover .search-bar__form .search-bar__input {
+  border-color: #116ac2;
+}
+
+.search-bar__container:hover .search-bar__img-wrapper {
+  border-color: #116ac2;
+}
+
+.search-bar__container .search-bar__form {
+  min-width: 300px;
+  max-width: 300px;
+}
+
+.search-bar__container .search-bar__form .search-bar__input {
+  width: 100%;
+  height: 100%;
+  border: solid 1px black;
+  border-right: none;
+  border-radius: 3px 0 0 3px;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.search-bar__container .search-bar__form .search-bar__input::placeholder {
+  color: #116ac2;
+}
+
+.search-bar__container .search-bar__img-wrapper {
+  width: 40px;
+  position: relative;
+  border: solid 1px black;
+  border-left: none;
+  border-radius: 0 3px 3px 0;
+  background: white;
+}
+
+.search-bar__container .search-bar__img-wrapper .search-bar__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 28px;
+}
+
+@media (max-width: 480px) {
+  .search-bar__container {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .search-bar__container .search-bar__form {
+    min-width: calc(100% - 40px);
+  }
+}
+
+.columns__wrapper {
+  display: flex;
+  margin-top: 80px;
+  justify-content: space-around;
+}
+
+.columns__wrapper .column__container {
+  overflow: hidden;
+  width: 45%;
+  padding: 10px;
+}
+
+@media (max-width: 1200px) {
+  .columns__wrapper {
+    display: block;
+  }
+  .columns__wrapper .column__container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .columns__wrapper .column__container:first-of-type {
+    margin-top: 120px;
+  }
+  .columns__wrapper .column__container:nth-of-type(2) {
+    margin-top: -20px;
+  }
+}
+
+.group__container {
+  margin-bottom: 80px;
+}
+
+.group__container .group__header {
+  color: #116ac2;
+  margin: 20px 0;
+}
+
+.group__container .group__title {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  padding: 15px 0;
+  color: black;
+  font-size: 18px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.group__container .group__title .group__title-img {
+  width: 30px;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.group__container .group__title:hover {
+  color: #116ac2;
+}
+
+.group__container .group__title:hover .group__title-img {
+  filter: brightness(130%);
+  -moz-animation: spinHorizontal 0.8s infinite linear;
+  -o-animation: spinHorizontal 0.8s infinite linear;
+  -webkit-animation: spinHorizontal 0.8s infinite linear;
+  animation: spinHorizontal 2s infinite linear;
+}
+
+.group__container .group__content-wrapper {
+  height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  border-bottom: 1px solid black;
+  transition: 0.3s linear;
+}
+
+.group__container .group__content-wrapper div {
+  overflow-x: scroll;
+}
+
+.group__container .group__content-wrapper-active {
+  padding: 15px 15px 30px 15px;
+  height: auto;
+}
+
+@keyframes spinHorizontal {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .group__container {
+    margin-bottom: 60px;
+  }
+  .group__container .group__header {
+    font-size: 18px;
+  }
+  .group__container .group__title {
+    font-size: 14px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  max-width: 100%;
+  padding: 0 15px 50px 15px;
+  line-height: 140%;
+}
+
+a:link {
+  color: #116ac2;
+}
+
+p {
+  padding: 10px 0;
+}
+
+table {
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+table tbody tr {
+  display: flex;
+}
+
+table tbody tr th,
+table tbody tr td {
+  min-width: calc(100% / 8);
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid black;
+  font-weight: 400;
+}
