@@ -2,6 +2,10 @@
 
 https://gist.github.com/tadz/14c1106b7408943b7c7de9ade37f8308
 
+# Demo
+
+http://www.jdm-option.pl/simplemining
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
